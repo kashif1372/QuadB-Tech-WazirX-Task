@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname,"./client/build")))
+app.use(express.static(path.join(__dirname,"./Client/build")))
 
 const fetchWazirXData = async () => {
     try {
@@ -62,7 +62,7 @@ const fetchWazirXData = async () => {
 // })
 
 app.get('/',function(req,res){
-  res.sendFile(path.join(__dirname,"./client/build/index.html"));
+  res.sendFile(path.join(__dirname,"./Client/build/index.html"));
 })
 
 app.get('/getData',async (req,res)=>{
